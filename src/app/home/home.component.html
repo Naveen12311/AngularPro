@@ -1,0 +1,13 @@
+<div class="container">
+  <div style="text-align:center">
+  <div class="row" *ngIf ="allblog">
+    <div class="col-sm-6" *ngFor = "let blog of allblog">
+        <div class="panel panel-primary">
+            <div class="panel-heading">{{blog.author}}</div>
+            <div class="panel-body">{{blog.description}}</div>
+            <div class="panel-footer"><a [routerLink] = "['/view',blog.blogId]" class="btn btn-warning">View</a></div>
+          </div>
+    </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+.header{
+    background-color: darkslategray;
+    color: aliceblue;
+    height: 150px;
+    width: 100%;
+    font-size: 2em;
+    padding: 20px;
+}

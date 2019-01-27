@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <form #form = "ngForm" (ngSubmit) = "editBlog()">
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" name="title" class="form-control" [(ngModel)] = "currentBlog.title">
+          </div>
+          <div class="form-group">
+              <label>Description</label>
+              <input type="text" name="description" class="form-control" [(ngModel)] = "currentBlog.description">
+            </div>
+            <div class="form-group">
+                <label>BlogBody</label>
+                <input type="text" name="blogBody" class="form-control" [(ngModel)] ="currentBlog.bodyHtml">
+              </div>
+              <div class="form-group">
+              <select class="form-control" name="category" [(ngModel)] ="currentBlog.category">
+                <option *ngFor = "let blog of possiblecat" [value] = "blog">
+                  {{blog}}
+                </option>
+              </select>
+              </div>
+              <button class="btn btn-danger" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    </div>
